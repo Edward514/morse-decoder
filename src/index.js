@@ -1,4 +1,4 @@
-function decode(expr)  {
+function decodeMorse(morseCode) {
   var ref = { 
     '.-':     'a',
     '-...':   'b',
@@ -38,7 +38,7 @@ function decode(expr)  {
     '-----':  '0',
   };
 
-  return expr
+  return morseCode
     .split('   ')
     .map(
       a => a
@@ -49,5 +49,5 @@ function decode(expr)  {
     ).join(' ');
 }
 
-var decoded = decode(".-- --- .-. -..   .-- --- .-. -..");
+var decoded = decodeMorse(".-- --- .-. -..   .-- --- .-. -..");
 console.log(decoded);
