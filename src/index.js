@@ -49,6 +49,5 @@ function decode(expr)  {
     ).join(' ');
 }
 
-module.exports = {
-    decode
-}
+var decoded = decode(".-- --- .-. -..   .-- --- .-. -..");
+console.log(decoded);
